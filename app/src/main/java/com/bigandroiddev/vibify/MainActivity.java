@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
         actionBarDrawerToggle.syncState();
 
-        VerificationUtils.verifyThroughVersionCode(this);
+//        VerificationUtils.verifyThroughVersionCode(this);
 
         warning = (TextView) findViewById(R.id.is_disabled_warning);
         appList = (ListView) findViewById(R.id.app_list);
