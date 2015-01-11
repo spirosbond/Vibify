@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceCategory
+    android:title="@string/vibration_settings_cat">
+
+    <ListPreference
+        android:key="vibration_duration_pref"
+        android:title="@string/vibration_duration_listpref"
+        android:summary="@string/vibration_duration_listpref_sum"
+        android:entries="@array/vibration_duration_entries"
+        android:entryValues="@array/vibration_duration_entries_values"
+        android:defaultValue="@string/duration_150"/>
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/movement_sensing_cat">
+
+        <ListPreference
+            android:key="stand_still_thresh"
+            android:title="@string/stand_still_thresh"
+            android:summary="@string/stand_still_thresh_sum"
+            android:entries="@array/stand_still_thresh_entries"
+            android:entryValues="@array/stand_still_thresh_entries_values"
+            android:defaultValue="@string/stand_still_value_3"/>
+
+        <ListPreference
+            android:key="movement_sleep_duration"
+            android:title="@string/movement_sleep_duration"
+            android:summary="@string/movement_sleep_duration_sum"
+            android:entries="@array/movement_sleep_duration_entries"
+            android:entryValues="@array/movement_sleep_duration_entries_values"
+            android:defaultValue="@string/movement_sleep_duration_value_7"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/advanced_sensing_cat">
+        <!--<ListPreference
+            android:key="safe_turnoff_delay"
+            android:title="@string/safe_turnoff"
+            android:summary="@string/safe_turnoff_sum"
+            android:entries="@array/safe_turnoff_delay_entries"
+            android:entryValues="@array/safe_turnoff_delay_entries_values"
+            android:defaultValue="@string/safe_turnoff_delay_value_never"/>-->
+        <CheckBoxPreference
+            android:key="proximity_sensor_check"
+            android:title="@string/proximity_sensor_check"
+            android:summary="@string/proximity_sensor_check_sum"
+            android:defaultValue="false"
+        />
+        </PreferenceCategory>
+</PreferenceScreen>

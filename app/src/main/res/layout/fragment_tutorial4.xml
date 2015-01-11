@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.bigandroiddev.vibify.Utils.Tutorial2$PlaceholderFragment">
+
+    <TextView
+        android:id="@+id/tutorial4_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/text_padding"
+        android:gravity="center"
+        android:textSize="@dimen/abc_text_size_title_material"
+        android:text="@string/showcase_title_6"/>
+
+    <TextView
+        android:id="@+id/tutorial4_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tutorial4_title"
+        android:padding="@dimen/text_padding"
+        android:textSize="@dimen/abc_text_size_medium_material"
+        android:text="Click the button bellow to get a test notification. Then, lock your device and leave it steady on the table for 5 seconds. Then pick it up and enjoy!"/>
+    <Button
+        android:id="@+id/test_notification_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tutorial4_message"
+        android:layout_margin="@dimen/button_margin"
+        android:layout_alignParentStart="true"
+        android:text="Throw Test Notification"/>
+
+    <Button
+        android:id="@+id/tutorial_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/button_margin"
+        android:layout_alignParentEnd="true"
+        android:text="Finish"/>
+    <TextView
+        android:id="@+id/tutorial4_thanks_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/test_notification_button"
+        android:padding="@dimen/text_padding"
+        android:textSize="@dimen/abc_text_size_medium_material"
+        android:text="@string/showcase_message_6"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tutorial4_thanks_message"
+        android:layout_above="@id/tutorial_finish"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|center_horizontal">
+
+
+        <ImageView
+            android:id="@+id/about_facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="tutorialOpenFacebookClick"
+            android:padding="6dip"
+            android:src="@drawable/ic_facebook"/>
+
+        <ImageView
+            android:id="@+id/about_googleplus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="tutorialOpenGoogleplusClick"
+            android:padding="6dip"
+            android:src="@drawable/ic_googleplus"/>
+
+        <ImageView
+            android:id="@+id/about_xda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="tutorialOpenXdaClick"
+            android:padding="6dip"
+            android:src="@drawable/ic_xda_icon"/>
+
+        <ImageView
+            android:id="@+id/about_twitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="tutorialOpenTwitterClick"
+            android:padding="6dip"
+            android:src="@drawable/ic_twitter"/>
+
+        <ImageView
+            android:id="@+id/about_crowdin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="tutorialOpenCrowdinClick"
+            android:padding="6dip"
+            android:src="@drawable/ic_ic_crowdin"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

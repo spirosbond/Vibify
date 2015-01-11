@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bigandroiddev.vibify" >
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".Vibify"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Services -->
+
+        <service
+            android:name=".Services.OrientationService"
+            android:enabled="true" />
+        <!-- android:process=":orientationService" -->
+
+        <service
+            android:name=".Services.ProximitySensorService"
+            android:enabled="true" />
+        <service
+            android:name=".Services.NLService"
+            android:enabled="true"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+        <!-- Broadcast Receivers -->
+
+        <receiver
+            android:name=".Receivers.ScreenOnOffReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.SCREEN_OFF" />
+                <action android:name="android.intent.action.SCREEN_ON" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".Receivers.BatteryLevelReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_LOW" />
+                <action android:name="android.intent.action.BATTERY_OKAY" />
+                <action android:name="android.intent.action.ACTION_BATTERY_LOW" />
+                <action android:name="android.intent.action.ACTION_BATTERY_OKAY" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".Receivers.BootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Activities -->
+
+        <activity
+            android:name=".Dialogs.AddAppDialog"
+            android:label="@string/add_app"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.Dialog" />
+        <activity
+            android:name=".PreferencesActivity"
+            android:label="@string/preferences"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Dialogs.TimesToShowSettingDialog"
+            android:label="@string/times_to_show_title"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.Dialog" />
+        <activity
+            android:name=".Dialogs.SafeTurnOffSettingDialog"
+            android:label="@string/safe_turnoff_title"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.Dialog" />
+        <activity
+            android:name=".Dialogs.SleepTimeSettingDialog"
+            android:label="@string/quiet_hours_title"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.Dialog" />
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/about_title"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Utils.Tutorial2"
+            android:label="@string/title_activity_tutorial2" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.bigandroiddev.vibify.Utils.Tutorial2$PlaceholderFragment">
+
+    <TextView
+        android:id="@+id/tutorial1_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/text_padding"
+        android:gravity="center"
+        android:textSize="@dimen/abc_text_size_title_material"
+        android:text="@string/showcase_title"/>
+
+    <TextView
+        android:id="@+id/tutorial1_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/text_padding"
+        android:text="Click to turn Vibify on. Return to this screen by pressing the 'Back' key."
+        android:textSize="@dimen/abc_text_size_medium_material"
+        android:layout_alignParentBottom="true"/>
+
+    <Switch
+        android:id="@+id/tutorial1_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tutorial1_message"
+        android:text="Turn ON/OFF"/>
+
+    <ImageView
+        android:id="@+id/tutorial1_logo"
+        android:layout_below="@id/tutorial1_title"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="150sp"
+        android:src="@drawable/about_logo"/>
+
+</RelativeLayout>

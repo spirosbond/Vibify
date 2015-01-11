@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/tutorial_pagination"
+        android:layout_width="wrap_content"
+        android:layout_height="20sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/activity_vertical_margin">
+
+        <ImageView
+            android:id="@+id/tutorial_page1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:padding="@dimen/abc_control_padding_material"
+            android:src="@drawable/page" />
+
+        <ImageView
+            android:id="@+id/tutorial_page2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tutorial_page1"
+            android:padding="@dimen/abc_control_padding_material"
+            android:src="@drawable/page" />
+
+        <ImageView
+            android:id="@+id/tutorial_page3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tutorial_page2"
+            android:padding="@dimen/abc_control_padding_material"
+            android:src="@drawable/page" />
+
+        <ImageView
+            android:id="@+id/tutorial_page4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tutorial_page3"
+            android:padding="@dimen/abc_control_padding_material"
+            android:src="@drawable/page" />
+
+        <ImageView
+            android:id="@+id/tutorial_page_active"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:padding="@dimen/abc_control_padding_material"
+            android:src="@drawable/page_active" />
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tutorial_pagination"
+        tools:context="com.bigandroiddev.vibify.Utils.Tutorial2" />
+
+</RelativeLayout>

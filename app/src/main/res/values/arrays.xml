@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="vibration_duration_entries">
+        <item>@string/duration_short</item>
+        <item>@string/duration_medium</item>
+        <item>@string/duration_long</item>
+        <item>@string/duration_extra_long</item>
+
+    </string-array>
+    <string-array name="vibration_duration_entries_values">
+        <item>@string/duration_50</item>
+        <item>@string/duration_150</item>
+        <item>@string/duration_250</item>
+        <item>@string/duration_350</item>
+    </string-array>
+
+    <string-array name="stand_still_thresh_entries">
+        <item>@string/stand_still_3</item>
+        <item>@string/stand_still_5</item>
+        <item>@string/stand_still_7</item>
+        <item>@string/stand_still_10</item>
+
+    </string-array>
+    <string-array name="stand_still_thresh_entries_values">
+        <item>@string/stand_still_value_3</item>
+        <item>@string/stand_still_value_5</item>
+        <item>@string/stand_still_value_7</item>
+        <item>@string/stand_still_value_10</item>
+    </string-array>
+
+    <string-array name="movement_sleep_duration_entries">
+        <item>@string/movement_sleep_duration_3</item>
+        <item>@string/movement_sleep_duration_5</item>
+        <item>@string/movement_sleep_duration_7</item>
+        <item>@string/movement_sleep_duration_10</item>
+        <item>@string/movement_sleep_duration_15</item>
+        <item>@string/movement_sleep_duration_20</item>
+        <item>@string/movement_sleep_duration_30</item>
+
+    </string-array>
+    <string-array name="movement_sleep_duration_entries_values">
+        <item>@string/movement_sleep_duration_value_3</item>
+        <item>@string/movement_sleep_duration_value_5</item>
+        <item>@string/movement_sleep_duration_value_7</item>
+        <item>@string/movement_sleep_duration_value_10</item>
+        <item>@string/movement_sleep_duration_value_15</item>
+        <item>@string/movement_sleep_duration_value_20</item>
+        <item>@string/movement_sleep_duration_value_30</item>
+    </string-array>
+    <string-array name="times_to_show_entries">
+        <item>@string/times_to_show_1</item>
+        <item>@string/times_to_show_2</item>
+        <item>@string/times_to_show_3</item>
+        <item>@string/times_to_show_5</item>
+
+    </string-array>
+    <string-array name="times_to_show_entries_values">
+        <item>@string/times_to_show_value_1</item>
+        <item>@string/times_to_show_value_2</item>
+        <item>@string/times_to_show_value_3</item>
+        <item>@string/times_to_show_value_5</item>
+
+    </string-array>
+
+    <string-array name="safe_turnoff_delay_entries">
+        <item>@string/safe_turnoff_delay_05</item>
+        <item>@string/safe_turnoff_delay_1</item>
+        <item>@string/safe_turnoff_delay_2</item>
+
+    </string-array>
+    <string-array name="safe_turnoff_delay_entries_values">
+        <item>@string/safe_turnoff_delay_value_05</item>
+        <item>@string/safe_turnoff_delay_value_1</item>
+        <item>@string/safe_turnoff_delay_value_2</item>
+
+    </string-array>
+
+</resources>

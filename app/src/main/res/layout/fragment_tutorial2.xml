@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.bigandroiddev.vibify.Utils.Tutorial2$PlaceholderFragment">
+
+
+    <TextView
+        android:id="@+id/tutorial2_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/text_padding"
+        android:gravity="center"
+        android:textSize="@dimen/abc_text_size_title_material"
+        android:text="@string/showcase_title_2"/>
+
+    <TextView
+        android:id="@+id/tutorial2_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/text_padding"
+        android:text="Select for which applications you want Vibify to work..."
+        android:textSize="@dimen/abc_text_size_medium_material"
+        android:layout_alignParentBottom="true"/>
+    <ListView
+        android:id="@+id/tutorial_app_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/tutorial2_title"
+        android:layout_above="@id/tutorial2_message"
+        android:clickable="true"
+        android:divider="@android:color/transparent"
+        android:scrollbarSize="0px"
+        android:scrollbarTrackVertical="@android:color/transparent"/>
+
+</RelativeLayout>

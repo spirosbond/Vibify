@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>credits</title>
+    <style type="text/css">
+        body {background:#FFF;}
+        #credits {margin: 0;padding: 0;}
+        #credits li {list-style-type: none;font-weight:bold;color:#333;margin-left: 0;padding-left: 0;}
+        #credits li ul {margin-bottom:10px;}
+        #credits li ul li{font-weight:normal;color:#333;list-style-type: circle;}
+        .warning {color:#FF0000;}
+        a {color:#000;}
+    </style>
+</head>
+<body>
+<ul id="credits">
+    <li>Andlytics Project
+        <ul>
+            <li>Apache License 2.0</li>
+            <li>Web: <a href="https://github.com/AndlyticsProject/andlytics">github.com/AndlyticsProject/andlytics</a></li>
+        </ul>
+    </li>
+    <li>ListViewAnimations
+        <ul>
+            <li>Apache License 2.0</li>
+            <li>Web: <a href="https://github.com/nhaarman/ListViewAnimations">github.com/nhaarman/ListViewAnimations</a></li>
+        </ul>
+    </li>
+    <li>Showcaseview
+        <ul>
+            <li>Apache License 2.0</li>
+            <li>Web: <a href="http://amlcurran.github.io/ShowcaseView/">amlcurran.github.io</a></li>
+        </ul>
+    </li>
+    <li>Visual Pharm - Icons8
+        <ul>
+            <li>CC BY-ND 3.0</li>
+            <li>Web: <a href="http://icons8.com/">icons8.com</a></li>
+        </ul>
+    </li>
+    <li>Social Media Icons - Jerry Low
+        <ul>
+            <li>CC BY-SA 3.0</li>
+            <li>Web: <a href="https://www.iconfinder.com/iconsets/leaf#readme">www.iconfinder.com</a></li>
+        </ul>
+    </li>
+    <li>Metro Uinvert Dock Icons - Dakirby309
+            <ul>
+                <li>Free for non commercial use</li>
+                <li>Web: <a href="http://dakirby309.deviantart.com/art/Metro-Uinvert-Dock-Icon-Set-725-Icons-294529071">dakirby309.deviantart.com</a></li>
+            </ul>
+        </li>
+    <li>FlatUI
+        <ul>
+            <li>Apache License 2.0</li>
+            <li>Web: <a href="https://github.com/eluleci/FlatUI">github.com/eluleci/FlatUI</a></li>
+        </ul>
+    </li>
+    <li>Rebound
+        <ul>
+            <li>BSD License</li>
+            <li>Web: <a href="http://facebook.github.io/rebound/">facebook.github.io</a></li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>

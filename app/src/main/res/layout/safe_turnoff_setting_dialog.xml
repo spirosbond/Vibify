@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="5sp"
+    android:paddingLeft="30sp"
+    android:paddingRight="30sp"
+    android:paddingTop="5sp">
+
+    <!--<com.cengalabs.flatui.views.FlatTextView
+        flatui:fontFamily="opensans"
+        flatui:fontWeight="light"
+        flatui:fontExtension="ttf"
+        android:id="@+id/safe_turnoff_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:paddingTop="5sp"
+        android:text="@string/safe_turnoff_title"
+        android:textSize="@dimen/abc_action_bar_title_text_size"/>-->
+
+    <TextView
+        android:id="@+id/safe_turnoff_sum"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="@string/safe_turnoff_sum"/>
+
+    <Spinner
+        android:id="@+id/safe_turnoff_value"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/safe_turnoff_sum"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:entries="@array/safe_turnoff_delay_entries"
+        android:entryValues="@array/safe_turnoff_delay_entries_values"/>
+
+    <ImageView
+        android:id="@+id/safe_turnoff_separator"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/safe_turnoff_value"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:background="@android:color/darker_gray"/>
+
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="5sp"
+        android:paddingLeft="30sp"
+        android:paddingRight="30sp"
+        android:paddingTop="5sp">
+
+
+        <ImageView
+            android:id="@+id/sleep_on_icon"
+            android:layout_width="@android:dimen/app_icon_size"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_night"/>
+
+        <TextView
+            android:id="@+id/sleep_on_text"
+            android:layout_width="fill_parent"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/sleep_on_icon"
+            android:gravity="center_vertical"
+            android:text="@string/good_night"/>
+
+        <TimePicker
+            android:id="@+id/sleep_on_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sleep_on_icon"/>
+
+        <ImageView
+            android:id="@+id/sleep_on_separator"
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/sleep_on_time"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:background="@android:color/darker_gray"/>
+
+        <ImageView
+            android:id="@+id/sleep_off_icon"
+            android:layout_width="@android:dimen/app_icon_size"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/sleep_on_separator"
+            android:src="@drawable/ic_day"/>
+
+        <TextView
+            android:id="@+id/sleep_off_text"
+            android:layout_width="fill_parent"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:layout_below="@id/sleep_on_separator"
+            android:layout_toLeftOf="@id/sleep_off_icon"
+            android:gravity="center_vertical"
+            android:text="@string/good_morning"/>
+
+        <TimePicker
+            android:id="@+id/sleep_off_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sleep_off_icon"/>
+
+        <ImageView
+            android:id="@+id/sleep_off_separator"
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/sleep_off_time"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:background="@android:color/darker_gray"/>
+
+    </RelativeLayout>
+</ScrollView>

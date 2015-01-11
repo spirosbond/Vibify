@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="5sp"
+    android:paddingLeft="30sp"
+    android:paddingRight="30sp"
+    android:paddingTop="5sp">
+
+    <!--<com.cengalabs.flatui.views.FlatTextView
+        flatui:fontFamily="opensans"
+        flatui:fontWeight="light"
+        flatui:fontExtension="ttf"
+        android:id="@+id/times_to_show_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:paddingTop="5sp"
+        android:text="@string/times_to_show_title"
+        android:textSize="@dimen/abc_action_bar_title_text_size"/>-->
+
+    <TextView
+
+        android:id="@+id/times_to_show_sum"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="@string/times_to_show_sum"/>
+
+    <Spinner
+        android:id="@+id/times_to_show_value"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/times_to_show_sum"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:entries="@array/times_to_show_entries"
+        android:entryValues="@array/times_to_show_entries_values"/>
+
+    <ImageView
+        android:id="@+id/times_to_show_separator"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/times_to_show_value"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:background="@android:color/darker_gray"/>
+
+</RelativeLayout>
