@@ -23,6 +23,7 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 import com.bigandroiddev.vibify.R;
+import com.bigandroiddev.vibify.Utils.VerificationUtils;
 import com.bigandroiddev.vibify.Vibify;
 import com.nhaarman.listviewanimations.swinginadapters.prepared.SwingBottomInAnimationAdapter;
 
@@ -174,6 +175,11 @@ public class ListController implements AdapterView.OnItemClickListener, AdapterV
         Log.d(TAG, "itemClicked: " + packageName);
 
         Vibify.setPackage(packageName, !Vibify.isPackage(packageName));
+        if(Vibify.countSelections()>5){
+            Vibify.setPackage(packageName, !Vibify.isPackage(packageName));
+            VerificationUtils.showBuyPremiumVersionDialog(activity);
+            return;
+        }
         if (Vibify.isPackage(packageName)) {
             appState.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.half_round_inv));
             appState.setBackgroundColor(activity.getResources().getColor(android.R.color.holo_green_light));
