@@ -23,6 +23,7 @@ import com.bigandroiddev.vibify.MainActivity;
 import com.bigandroiddev.vibify.R;
 import com.bigandroiddev.vibify.Utils.Tutorial;
 import com.bigandroiddev.vibify.Utils.Tutorial2;
+import com.bigandroiddev.vibify.Utils.VerificationUtils;
 import com.bigandroiddev.vibify.Vibify;
 
 import java.util.ArrayList;
@@ -55,7 +56,8 @@ public class NavDrawerUtils implements AdapterView.OnItemClickListener, AdapterV
                 View row = inflater.inflate(R.layout.nav_bar_list_row, parent, false);
 
                 if (arrayList.get(position).get(ITEM_KEY).equals(String.valueOf(R.string.about_title)) ||
-                        arrayList.get(position).get(ITEM_KEY).equals(String.valueOf(R.string.instructions_title))
+                        arrayList.get(position).get(ITEM_KEY).equals(String.valueOf(R.string.instructions_title)) ||
+                        arrayList.get(position).get(ITEM_KEY).equals(String.valueOf(R.string.support))
                         ) {
 
                     String pageId = arrayList.get(position).get(ITEM_KEY);
@@ -178,6 +180,11 @@ public class NavDrawerUtils implements AdapterView.OnItemClickListener, AdapterV
         mArrayList.add(item);
 
         item = new HashMap<String, String>();
+        item.put(ITEM_KEY, String.valueOf(R.string.support));
+        item.put(IMAGE_KEY, String.valueOf(R.drawable.ic_support));
+        mArrayList.add(item);
+
+        item = new HashMap<String, String>();
         item.put(ITEM_KEY, String.valueOf(R.string.instructions_title));
         item.put(IMAGE_KEY, String.valueOf(R.drawable.ic_instructions));
         mArrayList.add(item);
@@ -215,6 +222,8 @@ public class NavDrawerUtils implements AdapterView.OnItemClickListener, AdapterV
         } else if (id.equals(String.valueOf(R.string.instructions_title))) {
 //            new Tutorial((MainActivity) activity);
             activity.startActivity(new Intent(activity, Tutorial2.class));
+        } else if (id.equals(String.valueOf(R.string.support))) {
+            VerificationUtils.showBuyPremiumVersionDialog(activity);
         } else {
 
             Vibify.setSetting(id, !Vibify.isSetting(id));
