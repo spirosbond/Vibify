@@ -13,12 +13,14 @@ android {
     }
     buildTypes {
         release {
-
-            proguardFiles getDefaultProguardFile('../proguard/proguard-android-optimize-nologs.txt'), 'proguard-rules.pro'
+            minifyEnabled true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize-nologs.txt'), 'proguard-rules.pro'
         }
         debug {
-
-            proguardFiles getDefaultProguardFile('../proguard/proguard-android-optimize.txt'), 'proguard-rules.pro'
+            minifyEnabled true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 }
