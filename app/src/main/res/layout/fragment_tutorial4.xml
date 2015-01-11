@@ -15,7 +15,7 @@
         android:padding="@dimen/text_padding"
         android:gravity="center"
         android:textSize="@dimen/abc_text_size_title_material"
-        android:text="@string/showcase_title_6"/>
+        android:text="@string/tutorial4_title"/>
 
     <TextView
         android:id="@+id/tutorial4_message"
@@ -24,7 +24,7 @@
         android:layout_below="@id/tutorial4_title"
         android:padding="@dimen/text_padding"
         android:textSize="@dimen/abc_text_size_medium_material"
-        android:text="Click the button bellow to get a test notification. Then, lock your device and leave it steady on the table for 5 seconds. Then pick it up and enjoy!"/>
+        android:text="@string/tutorial4_message"/>
     <Button
         android:id="@+id/test_notification_button"
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
         android:layout_below="@id/tutorial4_message"
         android:layout_margin="@dimen/button_margin"
         android:layout_alignParentStart="true"
-        android:text="Throw Test Notification"/>
+        android:text="@string/tutorial4_button"/>
 
     <Button
         android:id="@+id/tutorial_finish"
@@ -41,7 +41,7 @@
         android:layout_alignParentBottom="true"
         android:layout_margin="@dimen/button_margin"
         android:layout_alignParentEnd="true"
-        android:text="Finish"/>
+        android:text="@string/tutorial_finish"/>
     <TextView
         android:id="@+id/tutorial4_thanks_message"
         android:layout_width="match_parent"
@@ -49,7 +49,7 @@
         android:layout_below="@id/test_notification_button"
         android:padding="@dimen/text_padding"
         android:textSize="@dimen/abc_text_size_medium_material"
-        android:text="@string/showcase_message_6"/>
+        android:text="@string/tutorial_thanks"/>
 
     <LinearLayout
         android:layout_width="fill_parent"

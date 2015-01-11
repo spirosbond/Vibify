@@ -179,7 +179,7 @@ public class Tutorial2 extends ActionBarActivity implements ViewPager.OnPageChan
             return 4;
         }
 
-        @Override
+        /*@Override
         public CharSequence getPageTitle(int position) {
             Locale l = Locale.getDefault();
             switch (position) {
@@ -191,7 +191,7 @@ public class Tutorial2 extends ActionBarActivity implements ViewPager.OnPageChan
                     return getString(R.string.title_section3).toUpperCase(l);
             }
             return null;
-        }
+        }*/
     }
 
     /**

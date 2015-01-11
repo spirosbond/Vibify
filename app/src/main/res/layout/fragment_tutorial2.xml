@@ -15,7 +15,7 @@
         android:padding="@dimen/text_padding"
         android:gravity="center"
         android:textSize="@dimen/abc_text_size_title_material"
-        android:text="@string/showcase_title_2"/>
+        android:text="@string/tutorial2_title"/>
 
     <TextView
         android:id="@+id/tutorial2_message"
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="@dimen/text_padding"
-        android:text="Select for which applications you want Vibify to work..."
+        android:text="@string/tutorial2_message"
         android:textSize="@dimen/abc_text_size_medium_material"
         android:layout_alignParentBottom="true"/>
     <ListView

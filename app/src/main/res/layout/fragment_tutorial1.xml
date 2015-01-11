@@ -14,7 +14,7 @@
         android:padding="@dimen/text_padding"
         android:gravity="center"
         android:textSize="@dimen/abc_text_size_title_material"
-        android:text="@string/showcase_title"/>
+        android:text="@string/tutorial1_title"/>
 
     <TextView
         android:id="@+id/tutorial1_message"
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="@dimen/text_padding"
-        android:text="Click to turn Vibify on. Return to this screen by pressing the 'Back' key."
+        android:text="@string/tutorial1_message"
         android:textSize="@dimen/abc_text_size_medium_material"
         android:layout_alignParentBottom="true"/>
 
@@ -31,7 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/tutorial1_message"
-        android:text="Turn ON/OFF"/>
+        android:text="@string/tutorial1_switch"/>
 
     <ImageView
         android:id="@+id/tutorial1_logo"
