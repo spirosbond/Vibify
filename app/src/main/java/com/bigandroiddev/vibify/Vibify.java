@@ -31,6 +31,7 @@ public class Vibify extends Application {
     private static final boolean OVERRIDE = true, DONT_OVERRIDE = false;
     private static final String supportPackages = ",com.android.phone,com.android.mms,com.viber.voip,com.skype.raider,com.google.android.talk,com.google.android.gm,com.facebook.katana,com.whatsapp,com.google.android.apps.plus,mikado.bizcalpro,netgenius.bizcal,com.ryosoftware.contactdatesnotifier,com.twitter.android,com.fsck.k9,com.onegravity.k10.pro2,de.gmx.mobile.android.mail,com.quoord.tapatalkHD,com.quoord.tapatalkpro.activity,com.facebook.orca,com.joelapenna.foursquared,com.snapchat.android,com.instagram.android,com.handcent.nextsms,kik.android,jp.naver.line.android,com.imo.android.imoim,de.shapeservices.impluslite,de.shapeservices.implusfull,com.bbm,com.gvoip,com.snrblabs.grooveip,com.google.android.apps.googlevoice,com.jb.gosms,com.moplus.gvphone,com.skymobius.vtok,com.google.android.calendar,com.android.calendar,";
     private static int timesShown = 0;
+    private static String appPackageName;
     private static SharedPreferences prefs;
     private static SharedPreferences.Editor editor;
     private static Intent orientationServiceIntent, proximityServiceIntent;
@@ -115,8 +116,8 @@ public class Vibify extends Application {
     }
 
     public static boolean isPackage(String packageName) {
-        Log.d(TAG, "isPackage" + ": " + packageName + ", " + (prefs.getBoolean(packageName, false) | packageName.contains("com.bigandroiddev.vibify")));
-        return prefs.getBoolean(packageName, false) | packageName.contains("com.bigandroiddev.vibify");
+        Log.d(TAG, "isPackage" + ": " + packageName + ", " + (prefs.getBoolean(packageName, false) | packageName.contains(appPackageName)));
+        return prefs.getBoolean(packageName, false) | packageName.contains(appPackageName);
     }
 
     public static void setSetting(String settingID, boolean value) {
@@ -220,8 +221,8 @@ public class Vibify extends Application {
     }
 
     public static int getSafeTurnoffDelayPref() {
-        Log.d(TAG, "getSafeTurnoffDelayPref" + ": " + Integer.parseInt(prefs.getString(SETTING_SAFE_TURNOFF_DELAY, "0")));
-        return Integer.parseInt(prefs.getString(SETTING_SAFE_TURNOFF_DELAY, "0"));
+        Log.d(TAG, "getSafeTurnoffDelayPref" + ": " + Integer.parseInt(prefs.getString(SETTING_SAFE_TURNOFF_DELAY, "3600")));
+        return Integer.parseInt(prefs.getString(SETTING_SAFE_TURNOFF_DELAY, "3600"));
     }
 
     public static boolean isSafeTurnoffDelayPref() {
@@ -236,8 +237,8 @@ public class Vibify extends Application {
     }
 
     public static int getTimesToShowPref() {
-        Log.d(TAG, "getTimesToShowPref: " + Integer.parseInt(prefs.getString(SETTING_TIMES_TO_SHOW, "0")));
-        return Integer.parseInt(prefs.getString(SETTING_TIMES_TO_SHOW, "0"));
+        Log.d(TAG, "getTimesToShowPref: " + Integer.parseInt(prefs.getString(SETTING_TIMES_TO_SHOW, "3")));
+        return Integer.parseInt(prefs.getString(SETTING_TIMES_TO_SHOW, "3"));
     }
 
     public static void setTimesToShowPref(String times) {
@@ -341,6 +342,7 @@ public class Vibify extends Application {
         proximityServiceIntent = new Intent(this, ProximitySensorService.class);
         //		restartMeAfterReceiver = new RestartMeAfterReceiver();
         ctx = this;
+        appPackageName = this.getPackageName();
 //		VerificationUtils.createTrialStart(getApplicationContext(), DONT_OVERRIDE);
 //		VerificationUtils.createTrialEnd(getApplicationContext(), 7, OVERRIDE);
 //		VerificationUtils.checkIfTrialEnded(getApplicationContext());
