@@ -135,7 +135,7 @@
     <string name="tutorial1_switch">Turn ON/OFF</string>
     <string name="tutorial2_message">Select for which applications you want Vibify to work…</string>
     <string name="tutorial3_title">Vibify Settings</string>
-    <string name="tutorial3_message">Tune your Vibify settings! Click the thre dots for more information and configuration</string>
+    <string name="tutorial3_message">Tune your Vibify settings! Click the three dots for more information and configuration</string>
     <string name="tutorial4_message">Click the button bellow to get a test notification. Then, lock your device and leave it steady on the table for 5 seconds. Then pick it up and enjoy!</string>
     <string name="tutorial4_button">Throw Test Notification</string>
     <string name="tutorial_finish">Finish</string>
