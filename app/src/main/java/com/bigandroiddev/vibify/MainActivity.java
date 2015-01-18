@@ -139,6 +139,7 @@ public class MainActivity extends ActionBarActivity {
         }
         listController.notifyAdapter();
         navDrawerUtils.loadList();
+        invalidateOptionsMenu();
 
     }
 
