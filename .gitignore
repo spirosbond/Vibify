@@ -1,0 +1,14 @@
+.gradle
+.idea/
+Vibify2.iml
+app/build/
+app/manifest-merger-release-report.txt
+app/update_translations.sh
+gradle/
+gradlew
+gradlew.bat
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
