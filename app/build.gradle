@@ -8,8 +8,8 @@ android {
         applicationId "com.spirosbond.vibify"
         minSdkVersion 18
         targetSdkVersion 22
-        versionCode 14
-        versionName '2.2.1:070515'
+        versionCode 15
+        versionName '2.2.2:070515'
     }
     buildTypes {
         release {
@@ -28,7 +28,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:support-v4:22.1.+'
     compile 'com.android.support:support-v13:22.1.+'
-    compile 'com.android.support:appcompat-v7:22.1.+'
+    compile 'com.android.support:appcompat-v7:22.0.+'
     compile 'com.android.support:cardview-v7:22.0.+'
     compile 'com.android.support:recyclerview-v7:22.0.+'
     compile 'com.nhaarman.listviewanimations:library:2.6.0'
