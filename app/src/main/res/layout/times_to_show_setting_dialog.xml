@@ -36,7 +36,8 @@
         android:layout_below="@id/times_to_show_sum"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:entries="@array/times_to_show_entries"
-        android:entryValues="@array/times_to_show_entries_values"/>
+        android:entryValues="@array/times_to_show_entries_values"
+        android:popupBackground="@color/background_floating_material_dark"/>
 
     <ImageView
         android:id="@+id/times_to_show_separator"

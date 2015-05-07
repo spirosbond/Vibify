@@ -35,7 +35,8 @@
         android:layout_below="@id/safe_turnoff_sum"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:entries="@array/safe_turnoff_delay_entries"
-        android:entryValues="@array/safe_turnoff_delay_entries_values"/>
+        android:entryValues="@array/safe_turnoff_delay_entries_values"
+        android:popupBackground="@color/background_floating_material_dark"/>
 
     <ImageView
         android:id="@+id/safe_turnoff_separator"
