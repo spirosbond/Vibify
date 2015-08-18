@@ -103,8 +103,10 @@ public class NLService extends NotificationListenerService {
     public void onNotificationPosted(StatusBarNotification sbn) {
         String packageName = sbn.getPackageName();
         Log.d(TAG, "onNotificationPosted: getPackage: " + packageName + " ongoing: " + sbn.isOngoing());
-        Vibify.setTimesShown(0);
         refreshNumberOfActiveNotifications();
+        if (Vibify.isPackage(packageName) && !sbn.isOngoing()) {
+            Vibify.setTimesShown(0);
+        }
         if (NLService.isPendingNotification() && Vibify.isScreenOff()) {
             Vibify.startOrientationService();
             Vibify.startProximityService();
@@ -142,7 +144,7 @@ public class NLService extends NotificationListenerService {
 
         ArrayList<StatusBarNotification> notificationList = new ArrayList<StatusBarNotification>();
         try {
-            for (StatusBarNotification sbn :  NLService.this.getActiveNotifications()) {
+            for (StatusBarNotification sbn : NLService.this.getActiveNotifications()) {
                 Log.d(TAG, "packageName: " + sbn.getPackageName() + " ongoing: " + sbn.isOngoing());
                 if (Vibify.isPackage(sbn.getPackageName()) && !sbn.isOngoing()) {
                     activeNotifications++;
@@ -182,7 +184,8 @@ public class NLService extends NotificationListenerService {
 
             try {
                 if (intent.getAction().equals(getApplicationContext().getPackageName() + "MOVEMENT_DETECTED") && isPendingNotification() /*Trivial*/ && Vibify.isEnabled()) {
-                    if (Vibify.isSetting(String.valueOf(R.string.nav_draw_screen_setting))) vibify.turnScreenOn();
+                    if (Vibify.isSetting(String.valueOf(R.string.nav_draw_screen_setting)))
+                        vibify.turnScreenOn();
                     Vibify.incTimesShown();
                     vibrator.vibrate(Vibify.getVibrationDurationPref());
                 }

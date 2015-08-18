@@ -154,6 +154,11 @@ public class OrientationService extends Service implements SensorEventListener {
         Log.d(TAG, "onDestroy");
         mSensorManager.unregisterListener(this);
         IS_RUNNING = false;
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         if (wl.isHeld()) wl.release();
     }
 
